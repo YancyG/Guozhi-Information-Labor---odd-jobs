@@ -1,0 +1,12 @@
+flowchart TD
+    FM_UI[文件管理界面]
+    FM_UI --> FM_List[文件列表区]
+    FM_UI --> FM_Toolbar[操作工具栏]
+    FM_UI --> FM_Info[文件信息/预览区]
+    FM_Toolbar --> FM_Upload[上传]
+    FM_Toolbar --> FM_Download[下载]
+    FM_Toolbar --> FM_Delete[删除]
+    FM_Toolbar --> FM_Rename[重命名]
+    FM_Toolbar --> FM_Copy[复制]
+    style FM_UI fill:#f9f,stroke:#333,stroke-width:2px
+    style FM_Toolbar fill:#fff,stroke:#333,stroke-width:1px 

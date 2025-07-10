@@ -1,3 +1,4 @@
+#冒泡排序
 def bubble_sort(arr):
     """
     冒泡排序算法
@@ -110,11 +111,15 @@ def performance_test():
     normal_time = time.time() - start_time
     print(f"普通冒泡排序耗时: {normal_time:.4f} 秒")
     
-    # 测试优化版冒泡排序
+    # 创建测试数据的副本，避免原始数据被排序算法修改，保证两种排序算法在相同数据下进行公平对比
     arr2 = test_data.copy()
+    # 记录优化版冒泡排序开始的时间，用于后续计算耗时
     start_time = time.time()
+    # 对副本数据进行优化版冒泡排序
     bubble_sort_optimized(arr2)
+    # 计算优化版冒泡排序的耗时，单位为秒
     optimized_time = time.time() - start_time
+    # 打印优化版冒泡排序的耗时结果，保留4位小数
     print(f"优化版冒泡排序耗时: {optimized_time:.4f} 秒")
     
     # 验证结果一致性
@@ -137,3 +142,5 @@ if __name__ == "__main__":
             performance_test()
         finally:
             sys.stdout = old_stdout
+
+#将以上所有代码全部注释
